@@ -39,12 +39,10 @@ gen-protos-python:
     done
     # python -m grpc_tools.protoc -I . --python_out=gen/python --grpc_python_out=gen/python $$proto; \
 
-
 gen-protos-go:
     @for proto in $(protofiles); do \
     echo $$proto; \
     protoc $$proto -I=. --go_out=gen/go --go_opt=paths=source_relative; \
     done
-
 
 gen-protos: gen-protos-java gen-protos-python gen-protos-go
