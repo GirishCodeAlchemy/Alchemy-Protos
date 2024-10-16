@@ -35,7 +35,8 @@ gen-protos-java:
 
 gen-protos-python:
     @for proto in $(protofiles); do \
-    protoc --python_out=pyi_out:new_gen protos/v1/alchemy_core.proto \
+    # protoc --python_out=pyi_out:new_gen protos/v1/alchemy_core.proto; 
+    protoc --python_out=gen/python $$proto; \
     done
     # python -m grpc_tools.protoc -I . --python_out=gen/python --grpc_python_out=gen/python $$proto; \
 
