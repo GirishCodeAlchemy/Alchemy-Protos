@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+// Define a package for the generated Go code.
+package simplemessage;
+
+// Option to specify Go package for Go code generation
+option go_package = "simplemessagepb";
+
+// Define a simple message with basic data types.
+message SimpleMessage {
+    string id = 1;          // Unique identifier
+    string name = 2;        // Name field
+    int32 age = 3;          // Age field
+    bool is_active = 4;     // Active status
+    repeated string tags = 5;  // List of tags
+}
