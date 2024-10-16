@@ -4,7 +4,8 @@ syntax = "proto3";
 package simplemessage;
 
 // Option to specify Go package for Go code generation
-option go_package = "simplemessagepb";
+option go_package = "github.com/girishcodelachemy/Alchemy-Protos/gen/go/simplemessagepb";
+
 
 // Define a simple message with basic data types.
 message SimpleMessage {
